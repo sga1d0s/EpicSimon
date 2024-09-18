@@ -27,22 +27,22 @@ function App() {
   // declaramos el array de objetos con sus colores, referencias al DOM, y sonidos
   const colors = [
     {
-      color: '#FA0E03',
+      color: '#d13722',
       ref: redRef,
       sound: 'three'
     },
     {
-      color: '#0AFA03',
+      color: '#41854f',
       ref: greenRef,
       sound: 'four'
     },
     {
-      color: '#030AFA',
+      color: '#9ed9e6',
       ref: blueRef,
       sound: 'two'
     },
     {
-      color: '#FAF303',
+      color: '#e9b12e',
       ref: yellowRef,
       sound: 'one'
     },
@@ -91,11 +91,11 @@ function App() {
       // ejecutamos play de id de colors[index]
       play({ id: colors[index].sound })
       // modificamos el estilo
-      colors[index].ref.current.style.opacity = (0);
+      colors[index].ref.current.style.opacity = (1);
       colors[index].ref.current.style.scale = (0.9);
 
       setTimeout(() => {
-        colors[index].ref.current.style.opacity = (0.5);
+        colors[index].ref.current.style.opacity = (0);
         colors[index].ref.current.style.scale = (1);
         setCurrentGame([...currentGame, index]);
         setPulses(pulses + 1);
@@ -103,6 +103,7 @@ function App() {
     }
   }
 
+  // useEffect PULSES
   useEffect(() => {
     if (pulses > 0) {
       if (Number(sequence[pulses - 1]) === Number(currentGame[pulses - 1])) {
@@ -151,11 +152,13 @@ function App() {
       sequence.map((item, index) => {
         setTimeout(() => {
           play({ id: colors[item].sound })
-          colors[item].ref.current.style.opacity = (0);
+          colors[item].ref.current.style.opacity = (1);
+          colors[item].ref.current.style.background = `radial-gradient(${colors[item].color} 0%, rgba(250, 14, 3, 0) 80%)`
           setTimeout(() => {
-            colors[item].ref.current.style.opacity = (0.5);
+            colors[item].ref.current.style.opacity = (0);
           }, speed / 2);
         }, speed * index);
+
       })
     }
     // seteamos a true para poder clickar
@@ -172,7 +175,7 @@ function App() {
             <>
               {/* mostramos si GAMEON es true */}
               <div className='header'>
-                <h1>Turn</h1>
+                <h1>Play...</h1>
               </div>
               <div className='container'>
                 {/* recorrer el array y crear div por color */}
@@ -196,7 +199,7 @@ function App() {
               <div className='header'>
                 <h1>EPIC SIMON</h1>
               </div>
-              <button onClick={initGame}>START! if you dare...</button>
+              <button className='custom-button' onClick={initGame}>START! if you dare...</button>
             </>
         }
       </div>

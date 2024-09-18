@@ -8,14 +8,19 @@
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
-header {}
+.custom-button {
+
+  font-family: 'MedievalSharp', cursive;
+  /* background-color: #5a5959; */
+}
 
 h1 {
   padding-top: 350px;
   color: white;
-  font-family: 'UnifrakturMaguntia', serif;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .container {
@@ -26,32 +31,28 @@ h1 {
 }
 
 .pad {
-  height: 180px;
-  width: 150px;
+  height: 200px;
+  width: 180px;
   background-size: cover;
   cursor: pointer;
-  border-radius: 100px;
-  
 }
 
 .pad:hover {
   cursor: pointer;
-  
 }
 
 .pad-0 {
-  margin-left: 120px;
-  
+  margin-left: 100px;
 }
 
 .pad-1 {
-  margin-left: 40px;
+  margin-left: 15px;
 }
 
 .pad-2 {
-  margin-left: 45px;
+  margin-left: 15px;
 }
 
 .pad-3 {
-  margin-left: 45px;
+  margin-left: 15px;
 }
