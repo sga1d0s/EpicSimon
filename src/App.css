@@ -1,0 +1,57 @@
+#root {
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-image: url('./assets/posada2.jpeg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {}
+
+h1 {
+  padding-top: 350px;
+  color: white;
+  font-family: 'UnifrakturMaguntia', serif;
+}
+
+.container {
+  display: flex;
+  width: 1000px;
+  height: 450px;
+  align-items: end;
+}
+
+.pad {
+  height: 180px;
+  width: 150px;
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 100px;
+  
+}
+
+.pad:hover {
+  cursor: pointer;
+  
+}
+
+.pad-0 {
+  margin-left: 120px;
+  
+}
+
+.pad-1 {
+  margin-left: 40px;
+}
+
+.pad-2 {
+  margin-left: 45px;
+}
+
+.pad-3 {
+  margin-left: 45px;
+}
