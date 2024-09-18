@@ -86,6 +86,7 @@ function App() {
     setTurn(turn + 1);
   }
 
+  // HANDLECLICK
   const handleClick = (index) => {
     if (isAllowedToPlay) {
       // ejecutamos play de id de colors[index]
@@ -203,7 +204,6 @@ function App() {
             </>
         }
       </div>
-
     </>
   )
 }

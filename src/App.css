@@ -11,8 +11,11 @@
 
 }
 
-.custom-button {
+body{
+  background-color: grey;
+}
 
+.custom-button {
   font-family: 'MedievalSharp', cursive;
   /* background-color: #5a5959; */
 }
