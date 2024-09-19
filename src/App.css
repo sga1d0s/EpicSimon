@@ -8,7 +8,6 @@
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 body{
@@ -17,7 +16,6 @@ body{
 
 .custom-button {
   font-family: 'MedievalSharp', cursive;
-  /* background-color: #5a5959; */
 }
 
 h1 {
