@@ -109,7 +109,7 @@ function App() {
             color.ref.current.style.opacity = 0;
           });
           setIsGameOn(false);
-        }, 2200);
+        }, speed * 2);
       }
     }
   }, [pulses]);
@@ -134,14 +134,17 @@ function App() {
   useEffect(() => {
     if (success === sequence.length && success > 0) {
       setTimeout(() => {
-        // reiniciar las variables necesarias para el siguiente turno
         setSuccess(0);
         setPulses(0);
         setCurrentGame([]);
-        randomNumber(); // generar un nuevo número para la siguiente ronda
-      }, 1000);
+        randomNumber();
+
+        // reducir tiempo entre pulsaciones
+        setSpeed(prevSpeed => Math.max(prevSpeed - 50, 100));
+      }, 500);
     }
   }, [success]);
+
 
   // UseEffect SEQUENCE
   // useEffect para manejar la secuencia del juego
