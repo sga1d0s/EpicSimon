@@ -183,7 +183,6 @@ function App() {
                     ref={item.ref}
                     className={`pad pad-${index}`}
                     style={{
-                      backgroundColor: `${item.color}`,
                       opacity: 0,
                       background: `radial-gradient(${item.color} 0%, rgba(250, 14, 3, 0) 80%)`,
                     }}
